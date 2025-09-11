@@ -9,6 +9,8 @@ const GlobalStyles = createGlobalStyle`
     --color-grey-200: hsl(185, 41%, 84%);
     --color-grey-50: hsl(189, 47%, 97%);
     --color-white: hsl(0, 100%, 100%);
+
+    --bg-color: var(--color-grey-200);
   }
 
   *,
@@ -20,6 +22,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    background-color: var(--bg-color);
     font-family: "Space Mono", monospace;
     font-weight: 700;
     font-style: normal;
