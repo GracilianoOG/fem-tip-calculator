@@ -1,11 +1,16 @@
 import { InputStyled, LabelStyled } from "./styles";
 import type { LabeledInputProps } from "./types";
 
-const LabeledInput = ({ id, label, placeholder }: LabeledInputProps) => {
+const LabeledInput = ({
+  id,
+  label,
+  placeholder,
+  iconSrc,
+}: LabeledInputProps) => {
   return (
     <>
       <LabelStyled htmlFor={id}>{label}</LabelStyled>
-      <InputStyled type="text" placeholder={placeholder} />
+      <InputStyled $icon={iconSrc} type="text" placeholder={placeholder} />
     </>
   );
 };
