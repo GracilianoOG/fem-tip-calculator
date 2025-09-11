@@ -23,6 +23,9 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     background-color: var(--bg-color);
+  }
+
+  body, input, button, a {
     font-family: "Space Mono", monospace;
     font-weight: 700;
     font-style: normal;
