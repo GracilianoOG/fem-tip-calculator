@@ -4,6 +4,7 @@ import DollarIcon from "../../assets/images/icon-dollar.svg";
 export const LabelStyled = styled.label`
   color: var(--color-grey-500);
   display: block;
+  margin-bottom: 0.375rem;
 `;
 
 export const InputStyled = styled.input`
@@ -16,7 +17,6 @@ export const InputStyled = styled.input`
   color: var(--color-green-900);
   display: block;
   font-size: 1.5rem;
-  margin-top: 0.5rem;
   min-height: 2.9375rem;
   padding: 0 1rem 0 2.8125rem;
   text-align: right;
