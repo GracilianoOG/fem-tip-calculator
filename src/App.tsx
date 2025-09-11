@@ -7,9 +7,24 @@ const MainTitleStyled = styled.h1`
   font-size: 25px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 30px;
   margin-top: 40px;
   letter-spacing: var(--spacing);
   padding-left: var(--spacing);
+`;
+
+const AppWrapperStyled = styled.div`
+  background-color: var(--color-white);
+  border-radius: 25px;
+  padding: 32px;
+`;
+
+const LabelStyled = styled.label`
+  display: block;
+`;
+
+const InputStyled = styled.div`
+  background-color: var(--color-grey-50);
 `;
 
 const App = () => {
@@ -21,6 +36,15 @@ const App = () => {
         <br />
         tter
       </MainTitleStyled>
+      <AppWrapperStyled>
+        <div>
+          <LabelStyled htmlFor="">Bill</LabelStyled>
+          <InputStyled>
+            <input type="text" />
+          </InputStyled>
+        </div>
+        <div></div>
+      </AppWrapperStyled>
     </>
   );
 };
