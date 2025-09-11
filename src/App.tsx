@@ -20,6 +20,12 @@ const AppWrapperStyled = styled.div`
   padding: 32px;
 `;
 
+const InputsWrapper = styled.div`
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+`;
+
 const App = () => {
   return (
     <>
@@ -30,9 +36,14 @@ const App = () => {
         tter
       </MainTitleStyled>
       <AppWrapperStyled>
-        <div>
-          <LabeledInput id="price" label="Bill" placeholder="0" />
-        </div>
+        <InputsWrapper>
+          <div>
+            <LabeledInput id="price" label="Bill" placeholder="0" />
+          </div>
+          <div>
+            <label htmlFor="">Select Tip %</label>
+          </div>
+        </InputsWrapper>
         <div></div>
       </AppWrapperStyled>
     </>
