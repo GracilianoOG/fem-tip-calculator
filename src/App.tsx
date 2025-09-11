@@ -21,6 +21,7 @@ const AppWrapperStyled = styled.div`
 `;
 
 const LabelStyled = styled.label`
+  color: var(--color-grey-500);
   display: block;
 `;
 
