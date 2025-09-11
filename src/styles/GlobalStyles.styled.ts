@@ -18,6 +18,12 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  body {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+  }
 `;
 
 export default GlobalStyles;
