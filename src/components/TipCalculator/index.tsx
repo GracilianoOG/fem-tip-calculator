@@ -1,8 +1,8 @@
 import LabeledInput from "../LabeledInput";
 import ResultPanel from "../ResultPanel";
 import TipMenu from "../TipMenu";
-import dollarIcon from "./assets/images/icon-dollar.svg";
-import personIcon from "./assets/images/icon-person.svg";
+import dollarIcon from "../../assets/images/icon-dollar.svg";
+import personIcon from "../../assets/images/icon-person.svg";
 import { AppWrapperStyled, InputsWrapper } from "./styles";
 
 const TipCalculator = () => {
