@@ -14,6 +14,7 @@ export const ResetButtonStyled = styled(TipButtonStyled)`
   background-color: var(--color-green-400);
   color: var(--color-green-900);
   font-size: 1.25rem;
+  padding: 0.5rem;
   text-transform: uppercase;
   width: 100%;
 `;
