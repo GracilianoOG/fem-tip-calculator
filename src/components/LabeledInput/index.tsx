@@ -10,7 +10,12 @@ const LabeledInput = ({
   return (
     <>
       <LabelStyled htmlFor={id}>{label}</LabelStyled>
-      <InputStyled $icon={iconSrc} type="text" placeholder={placeholder} />
+      <InputStyled
+        id={id}
+        $icon={iconSrc}
+        type="text"
+        placeholder={placeholder}
+      />
     </>
   );
 };
