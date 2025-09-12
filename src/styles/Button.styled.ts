@@ -9,3 +9,11 @@ export const TipButtonStyled = styled.button`
   padding: 0.3125rem 0;
   text-align: center;
 `;
+
+export const ResetButtonStyled = styled(TipButtonStyled)`
+  background-color: var(--color-green-400);
+  color: var(--color-green-900);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  width: 100%;
+`;
