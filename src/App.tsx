@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import GlobalStyles from "./styles/GlobalStyles.styled";
-import LabeledInput from "./components/LabeledInput";
+import TipCalculator from "./components/TipCalculator";
 
 const MainTitleStyled = styled.h1`
   --spacing: 10px;
@@ -14,18 +14,6 @@ const MainTitleStyled = styled.h1`
   padding-left: var(--spacing);
 `;
 
-const AppWrapperStyled = styled.div`
-  background-color: var(--color-white);
-  border-radius: 25px;
-  padding: 32px;
-`;
-
-const InputsWrapper = styled.div`
-  display: flex;
-  gap: 32px;
-  flex-direction: column;
-`;
-
 const App = () => {
   return (
     <>
@@ -35,17 +23,7 @@ const App = () => {
         <br />
         tter
       </MainTitleStyled>
-      <AppWrapperStyled>
-        <InputsWrapper>
-          <div>
-            <LabeledInput id="price" label="Bill" placeholder="0" />
-          </div>
-          <div>
-            <label htmlFor="">Select Tip %</label>
-          </div>
-        </InputsWrapper>
-        <div></div>
-      </AppWrapperStyled>
+      <TipCalculator />
     </>
   );
 };
