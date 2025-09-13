@@ -22,7 +22,6 @@ export const ResultsWrapperStyled = styled.div`
 
   ${mediaQueries.laptop} {
     border-radius: 1rem;
-    flex: 1;
 
     &::before {
       display: none;

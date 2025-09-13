@@ -23,7 +23,6 @@ export const InputsWrapper = styled.div`
   flex-direction: column;
 
   ${mediaQueries.laptop} {
-    flex: 1;
     justify-content: space-between;
     padding: 1rem;
   }
