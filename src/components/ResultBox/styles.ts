@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../utils/mediaQueries";
 
 export const ResultBoxStyled = styled.div`
   align-items: center;
@@ -11,6 +12,16 @@ export const ResultBoxStyled = styled.div`
 
   &:nth-of-type(2n) {
     margin-bottom: 2rem;
+  }
+
+  ${mediaQueries.laptop} {
+    &:first-of-type {
+      margin-bottom: 1.75rem;
+    }
+
+    &:nth-of-type(2n) {
+      margin-bottom: 7.5rem;
+    }
   }
 `;
 
@@ -27,4 +38,8 @@ export const ResultPerPersonStyled = styled.span`
 export const ResultPriceStyled = styled.p`
   color: var(--color-green-400);
   font-size: 1.875rem;
+
+  ${mediaQueries.laptop} {
+    font-size: 2.875rem;
+  }
 `;
