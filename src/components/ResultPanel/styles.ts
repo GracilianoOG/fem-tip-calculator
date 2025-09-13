@@ -22,6 +22,8 @@ export const ResultsWrapperStyled = styled.div`
 
   ${mediaQueries.laptop} {
     border-radius: 1rem;
+    padding: 2.5rem;
+    padding-top: 2.625rem;
 
     &::before {
       display: none;
