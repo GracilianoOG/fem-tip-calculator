@@ -10,6 +10,7 @@ export const AppWrapperStyled = styled.div`
 
   ${mediaQueries.laptop} {
     grid-template-columns: 1fr 1fr;
+    gap: 1.875rem;
     height: 30rem;
     margin: auto;
     padding: 2rem;
