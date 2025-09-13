@@ -1,4 +1,4 @@
-import { InputStyled, LabelStyled } from "./styles";
+import { InputWithIconStyled, LabelStyled } from "./styles";
 import type { LabeledInputProps } from "./types";
 
 const LabeledInput = ({
@@ -10,7 +10,7 @@ const LabeledInput = ({
   return (
     <>
       <LabelStyled htmlFor={id}>{label}</LabelStyled>
-      <InputStyled
+      <InputWithIconStyled
         id={id}
         $icon={iconSrc}
         type="text"
