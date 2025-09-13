@@ -5,6 +5,7 @@ export const AppWrapperStyled = styled.div`
   --max-width: 37.5rem;
   background-color: var(--color-white);
   border-radius: 1.5625rem;
+  box-shadow: 0 1.25rem 1.25rem 0.625rem hsla(183, 100%, 15%, 0.05);
   display: grid;
   gap: 2.5rem;
   margin: 0 auto;
