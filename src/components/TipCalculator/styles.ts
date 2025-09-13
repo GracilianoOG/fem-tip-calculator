@@ -4,15 +4,13 @@ import { mediaQueries } from "../../utils/mediaQueries";
 export const AppWrapperStyled = styled.div`
   background-color: var(--color-white);
   border-radius: 1.5625rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 2.5rem;
   padding: 2rem;
 
   ${mediaQueries.laptop} {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
     height: 30rem;
-    justify-content: space-between;
     margin: auto;
     padding: 2rem;
     width: 57.5rem;
