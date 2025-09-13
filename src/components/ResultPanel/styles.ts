@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../utils/mediaQueries";
 
 export const ResultsWrapperStyled = styled.div`
   background-color: var(--color-green-900);
@@ -17,5 +18,14 @@ export const ResultsWrapperStyled = styled.div`
     height: calc(100% + 1rem);
     inset: -0.5rem;
     z-index: -1;
+  }
+
+  ${mediaQueries.laptop} {
+    border-radius: 1rem;
+    flex: 1;
+
+    &::before {
+      display: none;
+    }
   }
 `;
