@@ -1,4 +1,5 @@
 import { TipButtonStyled } from "../../styles/Button.styled";
+import { InputStyled } from "../../styles/Input.styled";
 import { TipLabelStyled } from "../../styles/Label.styled";
 import { TipOptionsStyled } from "./styles";
 
@@ -12,7 +13,7 @@ const TipMenu = ({ label }: { label: string }) => {
         <TipButtonStyled>15%</TipButtonStyled>
         <TipButtonStyled>25%</TipButtonStyled>
         <TipButtonStyled>50%</TipButtonStyled>
-        <TipButtonStyled>99%</TipButtonStyled>
+        <InputStyled id="custom-tip" placeholder="Custom" />
       </TipOptionsStyled>
     </>
   );
