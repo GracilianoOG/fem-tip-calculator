@@ -6,7 +6,7 @@ export const TipOptionsStyled = styled.ul`
   grid-template-columns: 1fr 1fr;
   gap: 14px 16px;
 
-  ${mediaQueries.laptop} {
+  ${mediaQueries.tablet} {
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;
