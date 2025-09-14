@@ -4,8 +4,11 @@ import TipMenu from "../TipMenu";
 import dollarIcon from "../../assets/images/icon-dollar.svg";
 import personIcon from "../../assets/images/icon-person.svg";
 import { AppWrapperStyled, InputsWrapper } from "./styles";
+import useTipValues from "../../hooks/useTipValues";
 
 const TipCalculator = () => {
+  const { setBill, setPeople } = useTipValues();
+
   return (
     <AppWrapperStyled>
       <InputsWrapper>
@@ -15,6 +18,7 @@ const TipCalculator = () => {
             label="Bill"
             placeholder="0"
             iconSrc={dollarIcon}
+            setValue={setBill}
           />
         </div>
         <div>
@@ -26,6 +30,7 @@ const TipCalculator = () => {
             label="Number of People"
             placeholder="0"
             iconSrc={personIcon}
+            setValue={setPeople}
           />
         </div>
       </InputsWrapper>
