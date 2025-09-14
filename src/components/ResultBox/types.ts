@@ -1,4 +1,4 @@
 export interface ResultBoxProps {
   label: string;
-  total: number;
+  total: string;
 }
