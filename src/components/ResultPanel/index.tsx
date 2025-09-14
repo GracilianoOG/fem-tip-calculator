@@ -4,7 +4,6 @@ import ResultBox from "../ResultBox";
 import { ResultsWrapperStyled } from "./styles";
 
 const ResultPanel = () => {
-  // Todo: Get context values and calculate tip and total
   const { bill, tip, people } = useTipValues();
 
   const billPerPerson = bill / people;
