@@ -3,4 +3,5 @@ export interface LabeledInputProps {
   label: string;
   placeholder: string;
   iconSrc: string;
+  setValue: React.Dispatch<React.SetStateAction<number>>;
 }
