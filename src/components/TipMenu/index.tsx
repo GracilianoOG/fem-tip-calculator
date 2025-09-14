@@ -1,21 +1,18 @@
-import useTipValues from "../../hooks/useTipValues";
-import { TipButtonStyled } from "../../styles/Button.styled";
 import { InputStyled } from "../../styles/Input.styled";
 import { TipLabelStyled } from "../../styles/Label.styled";
+import TipButton from "../TipButton";
 import { TipOptionsStyled } from "./styles";
 
 const TipMenu = ({ label }: { label: string }) => {
-  const { setTip } = useTipValues();
-
   return (
     <>
       <TipLabelStyled htmlFor="custom-tip">{label}</TipLabelStyled>
       <TipOptionsStyled>
-        <TipButtonStyled onClick={() => setTip(0.05)}>5%</TipButtonStyled>
-        <TipButtonStyled onClick={() => setTip(0.1)}>10%</TipButtonStyled>
-        <TipButtonStyled onClick={() => setTip(0.15)}>15%</TipButtonStyled>
-        <TipButtonStyled onClick={() => setTip(0.25)}>25%</TipButtonStyled>
-        <TipButtonStyled onClick={() => setTip(0.5)}>50%</TipButtonStyled>
+        <TipButton label="5%" value={0.05} />
+        <TipButton label="10%" value={0.1} />
+        <TipButton label="15%" value={0.15} />
+        <TipButton label="25%" value={0.25} />
+        <TipButton label="50%" value={0.5} />
         <InputStyled id="custom-tip" placeholder="Custom" />
       </TipOptionsStyled>
     </>
