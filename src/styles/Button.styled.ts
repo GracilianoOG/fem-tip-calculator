@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const TipButtonStyled = styled.button`
+export const TipButtonStyled = styled.button<{ $pressed?: boolean }>`
   background-color: var(--color-green-900);
   border: 2px solid transparent;
   border-radius: 0.3125rem;
@@ -10,6 +10,13 @@ export const TipButtonStyled = styled.button`
   padding: 0.3125rem 0;
   transition: color 0.2s, background-color 0.2s;
   text-align: center;
+
+  ${({ $pressed }) =>
+    $pressed &&
+    css`
+      background-color: var(--color-green-400);
+      color: var(--color-green-900);
+    `}
 
   &:focus-visible,
   &:hover {
