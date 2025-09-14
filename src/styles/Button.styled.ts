@@ -11,6 +11,7 @@ export const TipButtonStyled = styled.button`
   transition: color 0.2s, background-color 0.2s;
   text-align: center;
 
+  &:focus-visible,
   &:hover {
     background-color: var(--color-green-300);
     color: var(--color-green-900);
