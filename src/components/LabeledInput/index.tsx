@@ -6,6 +6,7 @@ const LabeledInput = ({
   label,
   placeholder,
   iconSrc,
+  setValue,
 }: LabeledInputProps) => {
   return (
     <>
@@ -15,6 +16,7 @@ const LabeledInput = ({
         $icon={iconSrc}
         type="text"
         placeholder={placeholder}
+        onChange={e => setValue(parseFloat(e.target.value))}
       />
     </>
   );
