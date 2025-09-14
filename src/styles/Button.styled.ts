@@ -7,7 +7,13 @@ export const TipButtonStyled = styled.button`
   color: var(--color-white);
   font-size: 1.5rem;
   padding: 0.3125rem 0;
+  transition: color 0.2s, background-color 0.2s;
   text-align: center;
+
+  &:hover {
+    background-color: var(--color-green-300);
+    color: var(--color-green-900);
+  }
 `;
 
 export const ResetButtonStyled = styled(TipButtonStyled)`
