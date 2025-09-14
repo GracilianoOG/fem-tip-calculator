@@ -5,6 +5,7 @@ export const TipButtonStyled = styled.button`
   border: 2px solid transparent;
   border-radius: 0.3125rem;
   color: var(--color-white);
+  cursor: pointer;
   font-size: 1.5rem;
   padding: 0.3125rem 0;
   transition: color 0.2s, background-color 0.2s;
