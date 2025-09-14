@@ -31,6 +31,12 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 700;
     font-style: normal;
   }
+
+  button:focus-visible,
+  input:focus-visible {
+    outline: 2px solid var(--color-green-400);
+    outline-offset: 2px;
+  }
 `;
 
 export default GlobalStyles;
