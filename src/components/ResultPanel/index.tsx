@@ -7,13 +7,27 @@ const ResultPanel = () => {
   const { bill, tip, people } = useTipValues();
 
   const billPerPerson = bill / people;
-  const tipAmount = billPerPerson * tip;
-  const totalPerPerson = billPerPerson + tipAmount;
+
+  const calcTipAmount = () => {
+    if (!bill || !people || !tip) {
+      return 0;
+    }
+    const tipAmount = billPerPerson * tip;
+    return tipAmount;
+  };
+
+  const calcTotalPerPerson = () => {
+    if (!bill || !people || !tip) {
+      return 0;
+    }
+    const totalPerPerson = billPerPerson + calcTipAmount();
+    return totalPerPerson;
+  };
 
   return (
     <ResultsWrapperStyled>
-      <ResultBox label="Tip Amount" total={tipAmount.toFixed(2)} />
-      <ResultBox label="Total" total={totalPerPerson.toFixed(2)} />
+      <ResultBox label="Tip Amount" total={calcTipAmount().toFixed(2)} />
+      <ResultBox label="Total" total={calcTotalPerPerson().toFixed(2)} />
       <ResetButtonStyled>Reset</ResetButtonStyled>
     </ResultsWrapperStyled>
   );
