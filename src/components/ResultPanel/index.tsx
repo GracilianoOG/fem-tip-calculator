@@ -8,20 +8,24 @@ const ResultPanel = () => {
 
   const billPerPerson = bill / people;
 
+  const validateValues = () => {
+    return !(!bill || !people || !tip);
+  };
+
   const calcTipAmount = () => {
-    if (!bill || !people || !tip) {
-      return 0;
+    if (validateValues()) {
+      const tipAmount = billPerPerson * tip;
+      return tipAmount;
     }
-    const tipAmount = billPerPerson * tip;
-    return tipAmount;
+    return 0;
   };
 
   const calcTotalPerPerson = () => {
-    if (!bill || !people || !tip) {
-      return 0;
+    if (validateValues()) {
+      const totalPerPerson = billPerPerson + calcTipAmount();
+      return totalPerPerson;
     }
-    const totalPerPerson = billPerPerson + calcTipAmount();
-    return totalPerPerson;
+    return 0;
   };
 
   return (
