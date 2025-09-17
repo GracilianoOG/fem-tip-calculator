@@ -1,7 +1,6 @@
-import { TipLabelStyled } from "../../styles/Label.styled";
 import TipButton from "../TipButton";
 import TipInput from "../TipInput";
-import { TipOptionsStyled } from "./styles";
+import { TipLabelStyled, TipOptionsStyled } from "./styles";
 
 const TipMenu = ({ label }: { label: string }) => {
   return (
