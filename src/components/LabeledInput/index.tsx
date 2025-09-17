@@ -1,8 +1,9 @@
 import type React from "react";
-import { InputWithIconStyled, LabelStyled } from "./styles";
+import { InputWithIconStyled } from "./styles";
 import type { LabeledInputProps } from "./types";
 import { useRef } from "react";
 import { validateInputElement } from "../../utils/formValidations";
+import LabelWithMessage from "../LabelWithMessage";
 
 const LabeledInput = ({
   id,
@@ -37,10 +38,7 @@ const LabeledInput = ({
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <LabelStyled htmlFor={id}>{label}</LabelStyled>
-        <span ref={errorRef} style={{ color: "red" }}></span>
-      </div>
+      <LabelWithMessage id={id} label={label} messageElRef={errorRef} />
       <InputWithIconStyled
         id={id}
         $icon={iconSrc}
