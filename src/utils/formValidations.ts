@@ -58,7 +58,7 @@ export const decimalValidation: ValidationType[] = [
   },
   {
     type: "notNumber",
-    message: "Type a valid number!",
+    message: "Type a number!",
   },
   {
     type: "equalsZero",
@@ -66,7 +66,7 @@ export const decimalValidation: ValidationType[] = [
   },
   {
     type: "notPositive",
-    message: "Type a positive number!",
+    message: "Can't be negative!",
   },
 ];
 
@@ -74,6 +74,6 @@ export const integerValidation: ValidationType[] = [
   ...decimalValidation,
   {
     type: "notInteger",
-    message: "Type a whole number!",
+    message: "Only whole numbers!",
   },
 ];
