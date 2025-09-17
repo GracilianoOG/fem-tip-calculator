@@ -5,6 +5,10 @@ import dollarIcon from "../../assets/images/icon-dollar.svg";
 import personIcon from "../../assets/images/icon-person.svg";
 import { AppWrapperStyled, InputsWrapper } from "./styles";
 import useTipValues from "../../hooks/useTipValues";
+import {
+  decimalValidation,
+  integerValidation,
+} from "../../utils/formValidations";
 
 const TipCalculator = () => {
   const { setBill, setPeople } = useTipValues();
@@ -19,6 +23,7 @@ const TipCalculator = () => {
             placeholder="0"
             iconSrc={dollarIcon}
             setValue={setBill}
+            validations={decimalValidation}
           />
         </div>
         <div>
@@ -31,6 +36,7 @@ const TipCalculator = () => {
             placeholder="0"
             iconSrc={personIcon}
             setValue={setPeople}
+            validations={integerValidation}
           />
         </div>
       </InputsWrapper>
