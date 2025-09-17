@@ -2,6 +2,12 @@ import styled from "styled-components";
 import { mediaQueries } from "../../utils/mediaQueries";
 import { LabelStyled } from "../../styles/Label.styled";
 
+export const TipMenuStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
 export const TipOptionsStyled = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -12,6 +18,4 @@ export const TipOptionsStyled = styled.ul`
   }
 `;
 
-export const TipLabelStyled = styled(LabelStyled)`
-  margin-bottom: 1rem;
-`;
+export const TipLabelStyled = styled(LabelStyled)``;
