@@ -46,3 +46,30 @@ export const validateInputElement = (
 
   return [isInvalid, errorMessage];
 };
+
+export const decimalValidation: ValidationType[] = [
+  {
+    type: "empty",
+    message: "Can't be empty!",
+  },
+  {
+    type: "notNumber",
+    message: "Type a valid number!",
+  },
+  {
+    type: "equalsZero",
+    message: "Can't be zero!",
+  },
+  {
+    type: "notPositive",
+    message: "Type a positive number!",
+  },
+];
+
+export const integerValidation: ValidationType[] = [
+  ...decimalValidation,
+  {
+    type: "notInteger",
+    message: "Type a whole number!",
+  },
+];
