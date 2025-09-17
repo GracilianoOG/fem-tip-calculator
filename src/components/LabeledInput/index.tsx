@@ -45,7 +45,7 @@ const LabeledInput = ({
         id={id}
         $icon={iconSrc}
         type="text"
-        placeholder={placeholder}
+        placeholder={placeholder ?? "0"}
         onChange={handleChange}
       />
     </div>
