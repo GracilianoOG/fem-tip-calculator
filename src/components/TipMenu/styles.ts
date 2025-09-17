@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mediaQueries } from "../../utils/mediaQueries";
+import { LabelStyled } from "../../styles/Label.styled";
 
 export const TipOptionsStyled = styled.ul`
   display: grid;
@@ -9,4 +10,8 @@ export const TipOptionsStyled = styled.ul`
   ${mediaQueries.tablet} {
     grid-template-columns: 1fr 1fr 1fr;
   }
+`;
+
+export const TipLabelStyled = styled(LabelStyled)`
+  margin-bottom: 1rem;
 `;
