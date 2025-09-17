@@ -39,7 +39,7 @@ const LabeledInput = ({
     },
   ];
 
-  const handleValidation = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const input = e.target as HTMLInputElement;
 
     for (const validation of validations) {
@@ -71,7 +71,7 @@ const LabeledInput = ({
         $icon={iconSrc}
         type="text"
         placeholder={placeholder}
-        onChange={handleValidation}
+        onChange={handleChange}
       />
     </>
   );
