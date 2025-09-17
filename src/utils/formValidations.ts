@@ -10,6 +10,14 @@ export interface ValidationType {
   message: string;
 }
 
+const isNumber = (number: number): boolean => {
+  return (
+    typeof number === "number" &&
+    !Number.isNaN(number) &&
+    Number.isFinite(number)
+  );
+};
+
 export const validateInputElement = (
   validation: ValidationType,
   element: HTMLInputElement
@@ -31,11 +39,7 @@ export const validateInputElement = (
       isInvalid = numValue === 0;
       break;
     case "notNumber":
-      isInvalid = !(
-        typeof numValue === "number" &&
-        !Number.isNaN(numValue) &&
-        Number.isFinite(numValue)
-      );
+      isInvalid = !isNumber(numValue);
       break;
     case "notPositive":
       isInvalid = numValue < 0;
