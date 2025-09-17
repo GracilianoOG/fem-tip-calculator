@@ -33,7 +33,7 @@ export const validateInputElement = (
       isInvalid = element.value.trim().length === 0;
       break;
     case "notInteger":
-      isInvalid = !Number.isInteger(numValue);
+      isInvalid = isNumber(numValue) && !Number.isInteger(numValue);
       break;
     case "equalsZero":
       isInvalid = numValue === 0;
