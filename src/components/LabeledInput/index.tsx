@@ -36,7 +36,7 @@ const LabeledInput = ({
   };
 
   return (
-    <>
+    <div>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <LabelStyled htmlFor={id}>{label}</LabelStyled>
         <span ref={errorRef} style={{ color: "red" }}></span>
@@ -48,7 +48,7 @@ const LabeledInput = ({
         placeholder={placeholder}
         onChange={handleChange}
       />
-    </>
+    </div>
   );
 };
 
