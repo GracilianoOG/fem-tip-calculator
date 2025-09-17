@@ -5,7 +5,7 @@ import { TipOptionsStyled } from "./styles";
 
 const TipMenu = ({ label }: { label: string }) => {
   return (
-    <>
+    <div>
       <TipLabelStyled htmlFor="custom-tip">{label}</TipLabelStyled>
       <TipOptionsStyled>
         <TipButton label="5%" value={0.05} />
@@ -15,7 +15,7 @@ const TipMenu = ({ label }: { label: string }) => {
         <TipButton label="50%" value={0.5} />
         <TipInput id="custom-tip" placeholder="Custom" />
       </TipOptionsStyled>
-    </>
+    </div>
   );
 };
 
