@@ -2,10 +2,7 @@ import type React from "react";
 import { InputWithIconStyled, LabelStyled } from "./styles";
 import type { LabeledInputProps } from "./types";
 import { useRef } from "react";
-import {
-  validateInputElement,
-  type ValidationType,
-} from "../../utils/formValidations";
+import { validateInputElement } from "../../utils/formValidations";
 
 const LabeledInput = ({
   id,
@@ -13,31 +10,9 @@ const LabeledInput = ({
   placeholder,
   iconSrc,
   setValue,
+  validations,
 }: LabeledInputProps) => {
   const errorRef = useRef<HTMLSpanElement | null>(null);
-
-  const validations: ValidationType[] = [
-    {
-      type: "empty",
-      message: "Can't be empty!",
-    },
-    {
-      type: "notNumber",
-      message: "Type a number!",
-    },
-    {
-      type: "equalsZero",
-      message: "Can't be zero!",
-    },
-    {
-      type: "notPositive",
-      message: "Can't be negative!",
-    },
-    {
-      type: "notInteger",
-      message: "Only whole numbers!",
-    },
-  ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const input = e.target as HTMLInputElement;
