@@ -19,7 +19,6 @@ const TipCalculator = () => {
         <LabeledInput
           id="price"
           label="Bill"
-          placeholder="0"
           iconSrc={dollarIcon}
           setValue={setBill}
           validations={decimalValidation}
@@ -28,7 +27,6 @@ const TipCalculator = () => {
         <LabeledInput
           id="people"
           label="Number of People"
-          placeholder="0"
           iconSrc={personIcon}
           setValue={setPeople}
           validations={integerValidation}
