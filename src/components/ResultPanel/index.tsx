@@ -30,8 +30,8 @@ const ResultPanel = () => {
 
   return (
     <ResultsWrapperStyled>
-      <ResultBox label="Tip Amount" total={calcTipAmount().toFixed(2)} />
-      <ResultBox label="Total" total={calcTotalPerPerson().toFixed(2)} />
+      <ResultBox label="Tip Amount" total={calcTipAmount()} />
+      <ResultBox label="Total" total={calcTotalPerPerson()} />
       <ResetButtonStyled>Reset</ResetButtonStyled>
     </ResultsWrapperStyled>
   );
