@@ -1,8 +1,9 @@
 import TipButton from "../TipButton";
 import TipInput from "../TipInput";
 import { TipLabelStyled, TipOptionsStyled } from "./styles";
+import type { TipMenuProps } from "./types";
 
-const TipMenu = ({ label }: { label: string }) => {
+const TipMenu = ({ label }: TipMenuProps) => {
   return (
     <div>
       <TipLabelStyled htmlFor="custom-tip">{label}</TipLabelStyled>
