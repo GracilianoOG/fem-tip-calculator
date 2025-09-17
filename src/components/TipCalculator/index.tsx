@@ -16,29 +16,23 @@ const TipCalculator = () => {
   return (
     <AppWrapperStyled>
       <InputsWrapper>
-        <div>
-          <LabeledInput
-            id="price"
-            label="Bill"
-            placeholder="0"
-            iconSrc={dollarIcon}
-            setValue={setBill}
-            validations={decimalValidation}
-          />
-        </div>
-        <div>
-          <TipMenu label="Select Tip %" />
-        </div>
-        <div>
-          <LabeledInput
-            id="people"
-            label="Number of People"
-            placeholder="0"
-            iconSrc={personIcon}
-            setValue={setPeople}
-            validations={integerValidation}
-          />
-        </div>
+        <LabeledInput
+          id="price"
+          label="Bill"
+          placeholder="0"
+          iconSrc={dollarIcon}
+          setValue={setBill}
+          validations={decimalValidation}
+        />
+        <TipMenu label="Select Tip %" />
+        <LabeledInput
+          id="people"
+          label="Number of People"
+          placeholder="0"
+          iconSrc={personIcon}
+          setValue={setPeople}
+          validations={integerValidation}
+        />
       </InputsWrapper>
       <ResultPanel />
     </AppWrapperStyled>
