@@ -23,7 +23,7 @@ const LabeledInput = ({
     },
     {
       type: "notNumber",
-      message: "Type a valid number!",
+      message: "Type a number!",
     },
     {
       type: "equalsZero",
@@ -31,11 +31,11 @@ const LabeledInput = ({
     },
     {
       type: "notPositive",
-      message: "Type a positive number!",
+      message: "Can't be negative!",
     },
     {
       type: "notInteger",
-      message: "Type a whole number!",
+      message: "Only whole numbers!",
     },
   ];
 
