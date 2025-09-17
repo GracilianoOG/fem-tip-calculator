@@ -16,7 +16,6 @@ const ResultBox = ({ label, total }: ResultBoxProps) => {
       style: "currency",
       currencyDisplay: "symbol",
     });
-    console.log("created formatter");
   }
 
   return (

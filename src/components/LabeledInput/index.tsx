@@ -20,7 +20,6 @@ const LabeledInput = ({
 
     for (const validation of validations) {
       const [isInvalid, message] = validateInputElement(validation, input);
-      console.log(isInvalid, message);
 
       if (isInvalid && errorRef.current) {
         errorRef.current.textContent = message as string;
