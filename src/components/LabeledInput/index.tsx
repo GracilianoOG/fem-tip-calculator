@@ -22,20 +22,20 @@ const LabeledInput = ({
       message: "Can't be empty!",
     },
     {
-      type: "notInteger",
-      message: "Type a whole number!",
+      type: "notNumber",
+      message: "Type a valid number!",
     },
     {
       type: "equalsZero",
       message: "Can't be zero!",
     },
     {
-      type: "notNumber",
-      message: "Type a valid number!",
-    },
-    {
       type: "notPositive",
       message: "Type a positive number!",
+    },
+    {
+      type: "notInteger",
+      message: "Type a whole number!",
     },
   ];
 
