@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import {
   ResultBoxStyled,
   ResultPerPersonStyled,
@@ -7,18 +8,25 @@ import {
 import type { ResultBoxProps } from "./types";
 
 const ResultBox = ({ label, total }: ResultBoxProps) => {
-  const formatter = new Intl.NumberFormat("en-US", {
-    currency: "USD",
-    style: "currency",
-    currencyDisplay: "symbol",
-  });
+  const formatterRef = useRef<Intl.NumberFormat | null>(null);
+
+  if (!formatterRef.current) {
+    formatterRef.current = new Intl.NumberFormat("en-US", {
+      currency: "USD",
+      style: "currency",
+      currencyDisplay: "symbol",
+    });
+    console.log("created formatter");
+  }
 
   return (
     <ResultBoxStyled>
       <ResultTitleStyled>
         {label} <ResultPerPersonStyled>/ person</ResultPerPersonStyled>
       </ResultTitleStyled>
-      <ResultPriceStyled>{formatter.format(total)}</ResultPriceStyled>
+      <ResultPriceStyled>
+        {formatterRef.current.format(total)}
+      </ResultPriceStyled>
     </ResultBoxStyled>
   );
 };
