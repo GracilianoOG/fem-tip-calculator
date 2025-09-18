@@ -9,6 +9,8 @@ interface InputDataType {
 interface InputContextType {
   inputData: InputDataType;
   setInputData: React.Dispatch<React.SetStateAction<InputDataType>>;
+  inputErrors: InputDataType;
+  setInputErrors: React.Dispatch<React.SetStateAction<InputDataType>>;
   resetInputData: () => void;
 }
 
