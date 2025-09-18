@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const InputStyled = styled.input`
+export const InputStyled = styled.input<{ $hasError: boolean }>`
   border: 0.125rem solid transparent;
   border-radius: 0.3125rem;
   background-color: var(--color-grey-50);
@@ -12,4 +12,10 @@ export const InputStyled = styled.input`
   padding-right: 1rem;
   text-align: right;
   width: 100%;
+
+  ${({ $hasError }) =>
+    $hasError &&
+    css`
+      border-color: var(--error-color);
+    `}
 `;
