@@ -13,7 +13,8 @@ import useInputData from "../../hooks/useInputData";
 
 const TipCalculator = () => {
   const { setBill, setPeople } = useTipValues();
-  const { inputData, setInputData } = useInputData();
+  const { inputData, setInputData, inputErrors, setInputErrors } =
+    useInputData();
 
   return (
     <AppWrapperStyled>
@@ -25,6 +26,8 @@ const TipCalculator = () => {
           setValue={setBill}
           inputValue={inputData.bill}
           setInputValue={value => setInputData({ ...inputData, bill: value })}
+          error={inputErrors.bill}
+          setError={error => setInputErrors({ ...inputErrors, bill: error })}
           validations={decimalValidation}
         />
         <TipMenu label="Select Tip %" />
@@ -35,6 +38,8 @@ const TipCalculator = () => {
           setValue={setPeople}
           inputValue={inputData.people}
           setInputValue={value => setInputData({ ...inputData, people: value })}
+          error={inputErrors.people}
+          setError={error => setInputErrors({ ...inputErrors, people: error })}
           validations={integerValidation}
         />
       </InputsWrapper>
