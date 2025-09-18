@@ -9,9 +9,11 @@ import {
   decimalValidation,
   integerValidation,
 } from "../../utils/formValidations";
+import useInputData from "../../hooks/useInputData";
 
 const TipCalculator = () => {
   const { setBill, setPeople } = useTipValues();
+  const { inputData, setInputData } = useInputData();
 
   return (
     <AppWrapperStyled>
@@ -21,6 +23,8 @@ const TipCalculator = () => {
           label="Bill"
           iconSrc={dollarIcon}
           setValue={setBill}
+          inputValue={inputData.bill}
+          setInputValue={value => setInputData({ ...inputData, bill: value })}
           validations={decimalValidation}
         />
         <TipMenu label="Select Tip %" />
@@ -29,6 +33,8 @@ const TipCalculator = () => {
           label="Number of People"
           iconSrc={personIcon}
           setValue={setPeople}
+          inputValue={inputData.people}
+          setInputValue={value => setInputData({ ...inputData, people: value })}
           validations={integerValidation}
         />
       </InputsWrapper>
