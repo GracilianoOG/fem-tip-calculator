@@ -4,14 +4,18 @@ import { ResetButtonStyled } from "./styles";
 
 const ResetButton = () => {
   const { resetTipValues } = useTipValues();
-  const { resetInputData } = useInputData();
+  const { resetInputData, areInputsEmpty } = useInputData();
 
   const handleClick = () => {
     resetTipValues();
     resetInputData();
   };
 
-  return <ResetButtonStyled onClick={handleClick}>Reset</ResetButtonStyled>;
+  return (
+    <ResetButtonStyled $disabled={areInputsEmpty()} onClick={handleClick}>
+      Reset
+    </ResetButtonStyled>
+  );
 };
 
 export default ResetButton;
