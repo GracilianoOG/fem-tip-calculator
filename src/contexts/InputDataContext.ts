@@ -12,6 +12,7 @@ interface InputContextType {
   inputErrors: InputDataType;
   setInputErrors: React.Dispatch<React.SetStateAction<InputDataType>>;
   resetInputData: () => void;
+  areInputsEmpty: () => boolean;
 }
 
 export const InputDataContext = createContext<InputContextType | undefined>(
