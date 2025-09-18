@@ -7,7 +7,7 @@ const TipInput = ({ id, placeholder }: TipInputProps) => {
   const { setTip } = useTipValues();
   const { inputData, setInputData } = useInputData();
 
-  const handleClick = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTip(parseFloat(e.target.value) * 0.01);
     setInputData({ ...inputData, tip: e.target.value });
   };
@@ -16,7 +16,7 @@ const TipInput = ({ id, placeholder }: TipInputProps) => {
     <InputStyled
       id={id}
       placeholder={placeholder}
-      onChange={handleClick}
+      onChange={handleChange}
       value={inputData.tip}
     />
   );
