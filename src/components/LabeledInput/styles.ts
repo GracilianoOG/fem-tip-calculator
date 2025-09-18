@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { InputStyled } from "../../styles/Input.styled";
 
-export const LabeledInputStyled = styled.label`
+export const LabeledInputStyled = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.375rem;
