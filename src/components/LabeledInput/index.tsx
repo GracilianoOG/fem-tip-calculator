@@ -40,6 +40,7 @@ const LabeledInput = ({
       <InputWithIconStyled
         id={id}
         $icon={iconSrc}
+        $hasError={!!error}
         type="text"
         placeholder={placeholder ?? "0"}
         onChange={handleChange}
