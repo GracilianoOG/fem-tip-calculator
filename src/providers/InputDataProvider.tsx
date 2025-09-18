@@ -10,11 +10,16 @@ const defaultState = { bill: "", tip: "", people: "" };
 const InputDataProvider = ({ children }: InputDataProviderProps) => {
   const [inputData, setInputData] = useState(defaultState);
 
+  const resetInputData = () => {
+    setInputData(defaultState);
+  };
+
   return (
     <InputDataContext
       value={{
         inputData,
         setInputData,
+        resetInputData,
       }}
     >
       {children}
