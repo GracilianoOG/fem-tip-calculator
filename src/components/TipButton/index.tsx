@@ -1,5 +1,5 @@
 import useTipValues from "../../hooks/useTipValues";
-import { TipButtonStyled } from "../../styles/Button.styled";
+import { TipButtonStyled } from "./styles";
 import type { TipButtonProps } from "./types";
 
 const TipButton = ({ label, tipPercent }: TipButtonProps) => {
