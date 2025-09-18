@@ -3,13 +3,11 @@ import useTipValues from "../../hooks/useTipValues";
 import { ResetButtonStyled } from "./styles";
 
 const ResetButton = () => {
-  const { setBill, setTip, setPeople } = useTipValues();
+  const { resetTipValues } = useTipValues();
   const { resetInputData } = useInputData();
 
   const handleClick = () => {
-    setBill(0);
-    setTip(0);
-    setPeople(0);
+    resetTipValues();
     resetInputData();
   };
 
