@@ -10,8 +10,16 @@ const TipProvider = ({ children }: TipProviderProps) => {
   const [tip, setTip] = useState(0);
   const [people, setPeople] = useState(0);
 
+  const resetTipValues = () => {
+    setBill(0);
+    setTip(0);
+    setPeople(0);
+  };
+
   return (
-    <TipContext value={{ bill, setBill, tip, setTip, people, setPeople }}>
+    <TipContext
+      value={{ bill, setBill, tip, setTip, people, setPeople, resetTipValues }}
+    >
       {children}
     </TipContext>
   );
