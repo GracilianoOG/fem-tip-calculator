@@ -9,7 +9,8 @@ import type { TipInputProps } from "./types";
 
 const TipInput = ({ id, placeholder }: TipInputProps) => {
   const { setTip } = useTipValues();
-  const { inputData, setInputData, setInputErrors } = useInputData();
+  const { inputData, setInputData, inputErrors, setInputErrors } =
+    useInputData();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const input = e.target as HTMLInputElement;
@@ -38,6 +39,7 @@ const TipInput = ({ id, placeholder }: TipInputProps) => {
       placeholder={placeholder}
       onChange={handleChange}
       value={inputData.tip}
+      $hasError={!!inputErrors.tip}
     />
   );
 };
