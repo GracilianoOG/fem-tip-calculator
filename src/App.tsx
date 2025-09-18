@@ -3,6 +3,7 @@ import GlobalStyles from "./styles/GlobalStyles.styled";
 import TipCalculator from "./components/TipCalculator";
 import { mediaQueries } from "./utils/mediaQueries";
 import TipProvider from "./providers/TipProvider";
+import InputDataProvider from "./providers/InputDataProvider";
 
 const MainTitleStyled = styled.h1`
   --spacing: 10px;
@@ -25,13 +26,15 @@ const App = () => {
   return (
     <>
       <TipProvider>
-        <GlobalStyles />
-        <MainTitleStyled>
-          Spli
-          <br />
-          tter
-        </MainTitleStyled>
-        <TipCalculator />
+        <InputDataProvider>
+          <GlobalStyles />
+          <MainTitleStyled>
+            Spli
+            <br />
+            tter
+          </MainTitleStyled>
+          <TipCalculator />
+        </InputDataProvider>
       </TipProvider>
     </>
   );
