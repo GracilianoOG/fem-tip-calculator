@@ -9,9 +9,11 @@ const defaultState = { bill: "", tip: "", people: "" };
 
 const InputDataProvider = ({ children }: InputDataProviderProps) => {
   const [inputData, setInputData] = useState(defaultState);
+  const [inputErrors, setInputErrors] = useState(defaultState);
 
   const resetInputData = () => {
     setInputData(defaultState);
+    setInputErrors(defaultState);
   };
 
   return (
@@ -20,6 +22,8 @@ const InputDataProvider = ({ children }: InputDataProviderProps) => {
         inputData,
         setInputData,
         resetInputData,
+        inputErrors,
+        setInputErrors,
       }}
     >
       {children}
