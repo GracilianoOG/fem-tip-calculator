@@ -1,5 +1,5 @@
 import useTipValues from "../../hooks/useTipValues";
-import { ResetButtonStyled } from "../../styles/Button.styled";
+import ResetButton from "../ResetButton";
 import ResultBox from "../ResultBox";
 import { ResultsWrapperStyled } from "./styles";
 
@@ -32,7 +32,7 @@ const ResultPanel = () => {
     <ResultsWrapperStyled>
       <ResultBox label="Tip Amount" total={calcTipAmount()} />
       <ResultBox label="Total" total={calcTotalPerPerson()} />
-      <ResetButtonStyled>Reset</ResetButtonStyled>
+      <ResetButton />
     </ResultsWrapperStyled>
   );
 };
