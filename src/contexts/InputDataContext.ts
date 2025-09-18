@@ -9,6 +9,7 @@ interface InputDataType {
 interface InputContextType {
   inputData: InputDataType;
   setInputData: React.Dispatch<React.SetStateAction<InputDataType>>;
+  resetInputData: () => void;
 }
 
 export const InputDataContext = createContext<InputContextType | undefined>(
