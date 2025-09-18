@@ -1,5 +1,5 @@
 import type React from "react";
-import { InputWithIconStyled } from "./styles";
+import { InputWithIconStyled, LabeledInputStyled } from "./styles";
 import type { LabeledInputProps } from "./types";
 import { validateInputElement } from "../../utils/formValidations";
 import LabelWithMessage from "../LabelWithMessage";
@@ -35,7 +35,7 @@ const LabeledInput = ({
   };
 
   return (
-    <div>
+    <LabeledInputStyled>
       <LabelWithMessage id={id} label={label} message={error} />
       <InputWithIconStyled
         id={id}
@@ -45,7 +45,7 @@ const LabeledInput = ({
         onChange={handleChange}
         value={inputValue}
       />
-    </div>
+    </LabeledInputStyled>
   );
 };
 
