@@ -6,5 +6,7 @@ export interface LabeledInputProps {
   placeholder?: string;
   iconSrc: string;
   setValue: React.Dispatch<React.SetStateAction<number>>;
+  inputValue: string;
+  setInputValue: (value: string) => void;
   validations: ValidationType[];
 }
