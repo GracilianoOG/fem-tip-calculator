@@ -16,6 +16,12 @@ const InputDataProvider = ({ children }: InputDataProviderProps) => {
     setInputErrors(defaultState);
   };
 
+  const areInputsEmpty = () => {
+    const { bill: iBill, tip: iTip, people: iPeople } = inputData;
+    const { bill: errBill, tip: errTip, people: errPeople } = inputErrors;
+    return !iBill && !iTip && !iPeople && !errBill && !errTip && !errPeople;
+  };
+
   return (
     <InputDataContext
       value={{
@@ -24,6 +30,7 @@ const InputDataProvider = ({ children }: InputDataProviderProps) => {
         resetInputData,
         inputErrors,
         setInputErrors,
+        areInputsEmpty,
       }}
     >
       {children}
