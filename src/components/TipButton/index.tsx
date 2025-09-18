@@ -2,15 +2,16 @@ import useTipValues from "../../hooks/useTipValues";
 import { TipButtonStyled } from "../../styles/Button.styled";
 import type { TipButtonProps } from "./types";
 
-const TipButton = ({ label, value }: TipButtonProps) => {
+const TipButton = ({ label, tipPercent }: TipButtonProps) => {
   const { tip, setTip } = useTipValues();
+  const tipDecimal = tipPercent * 0.01;
 
   const handleClick = () => {
-    setTip(value);
+    setTip(tipDecimal);
   };
 
   return (
-    <TipButtonStyled $pressed={value === tip} onClick={handleClick}>
+    <TipButtonStyled $pressed={tipDecimal === tip} onClick={handleClick}>
       {label}
     </TipButtonStyled>
   );
