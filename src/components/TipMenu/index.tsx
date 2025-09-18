@@ -1,12 +1,20 @@
+import useInputData from "../../hooks/useInputData";
+import LabelWithMessage from "../LabelWithMessage";
 import TipButton from "../TipButton";
 import TipInput from "../TipInput";
-import { TipLabelStyled, TipMenuStyled, TipOptionsStyled } from "./styles";
+import { TipMenuStyled, TipOptionsStyled } from "./styles";
 import type { TipMenuProps } from "./types";
 
 const TipMenu = ({ label }: TipMenuProps) => {
+  const { inputErrors } = useInputData();
+
   return (
     <TipMenuStyled>
-      <TipLabelStyled htmlFor="custom-tip">{label}</TipLabelStyled>
+      <LabelWithMessage
+        id="custom-tip"
+        label={label}
+        message={inputErrors.tip}
+      />
       <TipOptionsStyled>
         <TipButton label="5%" tipPercent={5} />
         <TipButton label="10%" tipPercent={10} />
