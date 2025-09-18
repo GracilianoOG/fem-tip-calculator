@@ -10,8 +10,10 @@ const GlobalStyles = createGlobalStyle`
     --color-grey-200: hsl(185, 41%, 84%);
     --color-grey-50: hsl(189, 47%, 97%);
     --color-white: hsl(0, 100%, 100%);
+    --color-red: hsl(0, 100%, 50%);
 
     --bg-color: var(--color-grey-200);
+    --error-color: var(--color-red);
   }
 
   *,
