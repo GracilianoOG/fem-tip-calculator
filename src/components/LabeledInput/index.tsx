@@ -11,12 +11,15 @@ const LabeledInput = ({
   placeholder,
   iconSrc,
   setValue,
+  inputValue,
+  setInputValue,
   validations,
 }: LabeledInputProps) => {
   const errorRef = useRef<HTMLSpanElement | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const input = e.target as HTMLInputElement;
+    setInputValue(input.value);
 
     for (const validation of validations) {
       const [isInvalid, message] = validateInputElement(validation, input);
@@ -44,6 +47,7 @@ const LabeledInput = ({
         type="text"
         placeholder={placeholder ?? "0"}
         onChange={handleChange}
+        value={inputValue}
       />
     </div>
   );
