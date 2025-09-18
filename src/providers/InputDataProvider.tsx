@@ -5,8 +5,10 @@ interface InputDataProviderProps {
   children: React.ReactNode;
 }
 
+const defaultState = { bill: "", tip: "", people: "" };
+
 const InputDataProvider = ({ children }: InputDataProviderProps) => {
-  const [inputData, setInputData] = useState({ bill: "", tip: "", people: "" });
+  const [inputData, setInputData] = useState(defaultState);
 
   return (
     <InputDataContext
