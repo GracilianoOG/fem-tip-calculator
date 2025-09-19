@@ -24,7 +24,7 @@ const LabeledInput = ({
       const [isInvalid, message] = validateInputElement(validation, input);
 
       if (isInvalid) {
-        setError(message as string);
+        setError(message);
         setValue(0);
         return;
       }

@@ -22,7 +22,7 @@ const TipInput = ({ id, placeholder }: TipInputProps) => {
       if (isInvalid) {
         setInputErrors(prevErrors => ({
           ...prevErrors,
-          tip: message as string,
+          tip: message,
         }));
         setTip(0);
         return;
