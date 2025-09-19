@@ -21,7 +21,7 @@ const isNumber = (number: number): boolean => {
 export const validateInputElement = (
   validation: ValidationType,
   element: HTMLInputElement
-) => {
+): [boolean, string] => {
   let isInvalid: boolean = false;
 
   const type: string = validation.type;
