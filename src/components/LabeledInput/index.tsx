@@ -17,7 +17,7 @@ const LabeledInput = ({
   validations,
 }: LabeledInputProps) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const input = e.target as HTMLInputElement;
+    const input = e.target;
     setInputValue(input.value);
 
     for (const validation of validations) {

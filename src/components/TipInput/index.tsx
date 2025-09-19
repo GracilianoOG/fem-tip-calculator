@@ -13,7 +13,7 @@ const TipInput = ({ id, placeholder }: TipInputProps) => {
     useInputData();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const input = e.target as HTMLInputElement;
+    const input = e.target;
     setInputData({ ...inputData, tip: input.value });
 
     for (const validation of integerValidation) {
