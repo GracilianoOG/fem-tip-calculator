@@ -30,7 +30,9 @@ const TipInput = ({ id, placeholder }: TipInputProps) => {
     }
 
     setInputErrors(prevErrors => ({ ...prevErrors, tip: "" }));
-    setTip(parseInt(input.value) / 100);
+
+    const tipPercent = parseInt(input.value) / 100;
+    setTip(tipPercent);
   };
 
   return (
