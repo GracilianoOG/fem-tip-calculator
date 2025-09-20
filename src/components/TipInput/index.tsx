@@ -30,7 +30,7 @@ const TipInput = ({ id, placeholder }: TipInputProps) => {
     }
 
     setInputErrors(prevErrors => ({ ...prevErrors, tip: "" }));
-    setTip(parseFloat(input.value) * 0.01);
+    setTip(parseInt(input.value) * 0.01);
   };
 
   return (
