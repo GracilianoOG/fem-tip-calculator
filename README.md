@@ -69,7 +69,7 @@ npm start
 
 ## 🛠️ Developed with
 
-[![Ferramentas](https://skillicons.dev/icons?i=react,ts,styledcomponents,vite,nodejs,npm,vscode)](https://skillicons.dev)
+[![Icons of tools and technologies](https://skillicons.dev/icons?i=react,ts,styledcomponents,vite,nodejs,npm,vscode)](https://skillicons.dev)
 
 - Website developed with **React**.
 - I used **TypeScript** to prevent issues related to typing.
