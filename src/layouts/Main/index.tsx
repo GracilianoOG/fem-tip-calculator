@@ -1,4 +1,4 @@
-import TipCalculator from "../TipCalculator";
+import TipCalculator from "../../components/TipCalculator";
 
 const Main = () => {
   return (
