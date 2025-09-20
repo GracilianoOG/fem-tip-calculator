@@ -1,8 +1,8 @@
 import GlobalStyles from "./styles/GlobalStyles.styled";
-import TipCalculator from "./components/TipCalculator";
 import TipProvider from "./providers/TipProvider";
 import InputDataProvider from "./providers/InputDataProvider";
 import Header from "./components/Header";
+import Main from "./components/Main";
 
 const App = () => {
   return (
@@ -11,7 +11,7 @@ const App = () => {
         <InputDataProvider>
           <GlobalStyles />
           <Header />
-          <TipCalculator />
+          <Main />
         </InputDataProvider>
       </TipProvider>
     </>
