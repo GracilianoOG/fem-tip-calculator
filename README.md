@@ -1,69 +1,94 @@
-# React + TypeScript + Vite
+# ✨ Tip Calculator (Frontend Mentor)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Tip calculator preview](./design/preview.jpg)
 
-Currently, two official plugins are available:
+## 📖 Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tip calculator app developed with React, TypeScript, and Styled Components. Even though it's marked as a "junior" project at Frontend Mentor, I had a lot of challenges on how to present the errors and total results in a intuitive way.
 
-## Expanding the ESLint configuration
+Whenever the user types, the calculated values (on the right) will be updated only if all necessary values are provided. If the user provides an invalid value or leaves any input field empty, an error will appear next to the corresponding label.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+I tried to be as accurate to the design as possible using only the images provided.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Install and usage
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+1. Clone this repo:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/GracilianoOG/fem-tip-calculator.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Enter the directory:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd fem-tip-calculator/
 ```
+
+3. Init Visual Studio Code (or any other IDE):
+
+```bash
+code .
+```
+
+4. Install the dependencies:
+
+```bash
+npm install
+```
+
+5. Run the project:
+
+```bash
+npm start
+```
+
+## 📜 Available scripts
+
+| Script  | Command                | Description                                  |
+| ------- | ---------------------- | -------------------------------------------- |
+| dev     | `vite`                 | Runs the development server.                 |
+| build   | `tsc -b && vite build` | Builds the project, including type checking. |
+| lint    | `eslint .`             | Lints the codebase for issues.               |
+| preview | `vite preview`         | Previews the production build locally.       |
+
+## 🗂️ Project structure
+
+```
+📁 src/          -> Source code.
+  📁 assets/     -> Project images and other resources.
+  📁 components/ -> Main components.
+  📁 layouts/    -> Container components (header, main, etc).
+  📁 contexts/   -> React contexts.
+  📁 hooks/      -> Reusable hooks.
+  📁 providers/  -> Context providers.
+  📁 styles/     -> Global styles.
+  📁 utils/      -> General utility properties.
+  📄 App.tsx     -> Main app component.
+  📄 main.tsx    -> App entry point.
+```
+
+## 🛠️ Developed with
+
+[![Ferramentas](https://skillicons.dev/icons?i=react,ts,styledcomponents,vite,nodejs,npm,vscode)](https://skillicons.dev)
+
+- Website developed with **React**.
+- I used **TypeScript** to prevent issues related to typing.
+- Styles were created using the **Styled Components** library to enable writing CSS within TypeScript.
+- The project uses **Vite** to accelerate the development and build processes.
+
+## 🔗 Links
+
+- [Frontend Mentor](https://www.frontendmentor.io/)
+- [You don’t need a fancy library when you have HTML5 and Constraint API.](https://hackernoon.com/implement-form-validation-in-react-without-any-libraries)
+- [Validating User Input in React: Enhancing Form Interactivity](https://www.reacttutorial.com/validating-user-input-in-react)
+- [Intl.NumberFormat](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)
+- [useRef](https://react.dev/reference/react/useRef#manipulating-the-dom-with-a-ref)
+- [Handling Monetary Values in JavaScript: In-Depth Guide](https://expertbeacon.com/handling-monetary-values-in-javascript-in-depth-guide/)
+- [How to use React useRef with TypeScript](https://linguinecode.com/post/how-to-use-react-useref-with-typescript)
+- [Making Disabled Buttons More Inclusive](https://css-tricks.com/making-disabled-buttons-more-inclusive/)
+
+## 🧑🏻‍💻 Author
+
+| [<img src="https://avatars.githubusercontent.com/u/72778164?s=96&v=4"><br><sub>GracilianoOG</sub>](https://github.com/GracilianoOG) |
+| :---------------------------------------------------------------------------------------------------------------------------------: |
+|                                       [Linkedin](https://www.linkedin.com/in/gabrielgmbarros)                                       |
