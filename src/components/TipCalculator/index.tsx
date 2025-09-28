@@ -1,13 +1,13 @@
 import ResultPanel from "../ResultPanel";
-import { AppWrapperStyled } from "./styles";
+import { TipCalculatorStyled } from "./styles";
 import InputsPanel from "../InputsPanel";
 
 const TipCalculator = () => {
   return (
-    <AppWrapperStyled>
+    <TipCalculatorStyled>
       <InputsPanel />
       <ResultPanel />
-    </AppWrapperStyled>
+    </TipCalculatorStyled>
   );
 };
 

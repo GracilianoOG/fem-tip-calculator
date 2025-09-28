@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { mediaQueries } from "../../utils/responsive/mediaQueries";
 
-export const AppWrapperStyled = styled.div`
+export const TipCalculatorStyled = styled.div`
   --max-width: 37.5rem;
   background-color: var(--color-white);
   border-radius: 1.5625rem;
