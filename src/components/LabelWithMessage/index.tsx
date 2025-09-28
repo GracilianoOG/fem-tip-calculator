@@ -6,7 +6,7 @@ const LabelWithMessage = ({ id, label, message }: LabelWithMessageProps) => {
   return (
     <LabelWrapperStyled>
       <LabelStyled htmlFor={id}>{label}</LabelStyled>
-      <LabelMessageStyled>{message}</LabelMessageStyled>
+      {message && <LabelMessageStyled>{message}</LabelMessageStyled>}
     </LabelWrapperStyled>
   );
 };
