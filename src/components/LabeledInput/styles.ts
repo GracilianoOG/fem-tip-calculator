@@ -10,6 +10,6 @@ export const LabeledInputStyled = styled.div`
 export const InputWithIconStyled = styled(InputStyled)<{ $icon: string }>`
   background-image: url("${({ $icon }) => $icon}");
   background-repeat: no-repeat;
-  background-position: center left 1.125rem;
+  background-position: center left 1rem;
   padding-left: 3rem;
 `;
