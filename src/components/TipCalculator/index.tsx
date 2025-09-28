@@ -8,7 +8,7 @@ import useTipValues from "../../hooks/useTipValues";
 import {
   decimalValidation,
   integerValidation,
-} from "../../utils/formValidations";
+} from "../../utils/validations/formValidations";
 import useInputData from "../../hooks/useInputData";
 
 const TipCalculator = () => {

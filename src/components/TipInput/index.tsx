@@ -4,7 +4,7 @@ import { InputStyled } from "../../styles/Input.styled";
 import {
   integerValidation,
   validateInputElement,
-} from "../../utils/formValidations";
+} from "../../utils/validations/formValidations";
 import type { TipInputProps } from "./types";
 
 const TipInput = ({ id, placeholder }: TipInputProps) => {

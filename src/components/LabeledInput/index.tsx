@@ -1,7 +1,7 @@
 import type React from "react";
 import { InputWithIconStyled, LabeledInputStyled } from "./styles";
 import type { LabeledInputProps } from "./types";
-import { validateInputElement } from "../../utils/formValidations";
+import { validateInputElement } from "../../utils/validations/formValidations";
 import LabelWithMessage from "../LabelWithMessage";
 
 const LabeledInput = ({

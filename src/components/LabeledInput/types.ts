@@ -1,4 +1,4 @@
-import type { ValidationType } from "../../utils/formValidations";
+import type { ValidationType } from "../../utils/validations/formValidations";
 
 export interface LabeledInputProps {
   id: string;
