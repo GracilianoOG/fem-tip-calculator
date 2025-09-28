@@ -24,6 +24,9 @@ const isZero = (number: number) => number === 0;
 
 const isPositive = (number: number) => number > 0;
 
+const isValidInteger = (number: number) =>
+  isNumber(number) && Number.isInteger(number);
+
 export const validateInputElement = (
   validation: ValidationType,
   element: HTMLInputElement
@@ -39,7 +42,7 @@ export const validateInputElement = (
       isInvalid = isEmpty(element.value);
       break;
     case "notInteger":
-      isInvalid = isNumber(numValue) && !Number.isInteger(numValue);
+      isInvalid = !isValidInteger(numValue);
       break;
     case "equalsZero":
       isInvalid = isZero(numValue);
