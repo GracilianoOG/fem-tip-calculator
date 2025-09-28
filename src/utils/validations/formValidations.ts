@@ -1,16 +1,5 @@
 import * as Helpers from "./formHelpers";
-
-type ValidationErrorType =
-  | "empty"
-  | "equalsZero"
-  | "notNumber"
-  | "notInteger"
-  | "notPositive";
-
-export interface ValidationType {
-  type: ValidationErrorType;
-  message: string;
-}
+import type { ValidationType } from "./types";
 
 export const validateInputElement = (
   validation: ValidationType,
