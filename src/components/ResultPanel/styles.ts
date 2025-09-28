@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mediaQueries } from "../../utils/mediaQueries";
+import { mediaQueries } from "../../utils/responsive/mediaQueries";
 
 export const ResultsWrapperStyled = styled.div`
   background-color: var(--color-green-900);

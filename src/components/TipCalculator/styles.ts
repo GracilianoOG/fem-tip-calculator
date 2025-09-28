@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mediaQueries } from "../../utils/mediaQueries";
+import { mediaQueries } from "../../utils/responsive/mediaQueries";
 
 export const AppWrapperStyled = styled.div`
   --max-width: 37.5rem;
