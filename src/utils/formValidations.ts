@@ -20,6 +20,8 @@ const isNumber = (number: number): boolean => {
 
 const isEmpty = (value: string) => value.trim().length === 0;
 
+const isZero = (number: number) => number === 0;
+
 export const validateInputElement = (
   validation: ValidationType,
   element: HTMLInputElement
@@ -38,7 +40,7 @@ export const validateInputElement = (
       isInvalid = isNumber(numValue) && !Number.isInteger(numValue);
       break;
     case "equalsZero":
-      isInvalid = numValue === 0;
+      isInvalid = isZero(numValue);
       break;
     case "notNumber":
       isInvalid = !isNumber(numValue);
