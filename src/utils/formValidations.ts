@@ -18,6 +18,8 @@ const isNumber = (number: number): boolean => {
   );
 };
 
+const isEmpty = (value: string) => value.trim().length === 0;
+
 export const validateInputElement = (
   validation: ValidationType,
   element: HTMLInputElement
@@ -30,7 +32,7 @@ export const validateInputElement = (
 
   switch (type) {
     case "empty":
-      isInvalid = element.value.trim().length === 0;
+      isInvalid = isEmpty(element.value);
       break;
     case "notInteger":
       isInvalid = isNumber(numValue) && !Number.isInteger(numValue);
