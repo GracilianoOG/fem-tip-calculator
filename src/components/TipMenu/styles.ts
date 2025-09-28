@@ -15,6 +15,7 @@ export const TipOptionsStyled = styled.ul`
 
   ${mediaQueries.tablet} {
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.875rem;
   }
 `;
 
