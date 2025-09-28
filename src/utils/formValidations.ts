@@ -1,3 +1,5 @@
+import * as Helpers from "./formHelpers";
+
 type ValidationErrorType =
   | "empty"
   | "equalsZero"
@@ -9,23 +11,6 @@ export interface ValidationType {
   type: ValidationErrorType;
   message: string;
 }
-
-const isNumber = (number: number): boolean => {
-  return (
-    typeof number === "number" &&
-    !Number.isNaN(number) &&
-    Number.isFinite(number)
-  );
-};
-
-const isEmpty = (value: string) => value.trim().length === 0;
-
-const isZero = (number: number) => number === 0;
-
-const isPositive = (number: number) => number > 0;
-
-const isValidInteger = (number: number) =>
-  isNumber(number) && Number.isInteger(number);
 
 export const validateInputElement = (
   validation: ValidationType,
@@ -39,19 +24,19 @@ export const validateInputElement = (
 
   switch (type) {
     case "empty":
-      isInvalid = isEmpty(element.value);
+      isInvalid = Helpers.isEmpty(element.value);
       break;
     case "notInteger":
-      isInvalid = !isValidInteger(numValue);
+      isInvalid = !Helpers.isValidInteger(numValue);
       break;
     case "equalsZero":
-      isInvalid = isZero(numValue);
+      isInvalid = Helpers.isZero(numValue);
       break;
     case "notNumber":
-      isInvalid = !isNumber(numValue);
+      isInvalid = !Helpers.isNumber(numValue);
       break;
     case "notPositive":
-      isInvalid = !isPositive(numValue);
+      isInvalid = !Helpers.isPositive(numValue);
       break;
   }
 
